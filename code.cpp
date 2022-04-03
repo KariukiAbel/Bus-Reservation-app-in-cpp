@@ -157,5 +157,16 @@ void a::allotment(){
    std::cout << "\n\nThere are " << p << " seats empty in Bus No: " << bus[l].busn;
  }
 void a::avail(){
-  
+  for(int n = 0; n < p; n++){
+    vline('*');
+    cout<<"Bus no: \t" <<bus[n].busn
+    <<"\nDriver: \t"<<bus[n].driver
+    <<"\t\tArrival time: \t" <<bus[n].arraival
+    <<"\tDeparture Time: \t" <<bus[n].depart
+    << "\nFrom: \t\t" <<bus[n].from
+    <<"\t\tTo: \t\t\t" << bus[n].to
+    << "\n";
+    vline('*');
+    vline('_')
+  }
 }
