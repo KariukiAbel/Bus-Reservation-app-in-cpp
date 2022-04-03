@@ -1,6 +1,6 @@
 // #include <conio.h>
-#include <cstdio.h>
-#include <iostream.h>
+#include <stdio.h>
+#include <iostream>
 #include <string.h>
 #include <stdlib.h>
 
@@ -19,14 +19,12 @@ public:
   void show();
   void avail();
   void position(int i);
-  a (arguments);
-  virtual ~name_t ();
-};
+}
 bus[10];
 void vline(char ch){
   for (int i = 80; i > 0; i--) {
     /* code */
-    cout <<ch;
+    std::cout <<ch;
   }
 }
 
@@ -53,7 +51,8 @@ void a::allotment(){
   top:
   std::cout << "Bus no: ";
   std::cin >> number;
-  for (int n = 0; n <= p; n++) {
+  int n;
+  for (n = 0; n <= p; n++) {
     /* code */
     if (strcmp(bus[n].busn, number) == 0)
       break;
