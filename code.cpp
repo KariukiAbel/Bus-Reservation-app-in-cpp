@@ -101,7 +101,7 @@ void a::allotment(){
        /* code */
        break;
      }
-     while(n<= p){
+     while(n <= p){
        vline('*');
        std::cout << "Bus no: \t" << bus[n].busn
        << "\nDriver: \t" << bus[n].driver
@@ -112,6 +112,48 @@ void a::allotment(){
        vline('*');
        bus[0].position(n);
        int a =1;
+       for (int i = 0; i < 8; i++) {
+         /* code */
+         for (int j = 0; j < 4; j++) {
+           /* code */
+           a++;
+           if(strcpy(bus[n].seat[i][j], "Empty") != 0)
+           std::cout << "\nThe seat no " << (a-1) <<" is reserved for "<< bus[n].seat[i][j] << ".";
+         }
+       }
+       break;
      }
+     if(n > p)
+     std::cout << "Enter correct bus no: ";
    }
  }
+
+ void a::position(int l){
+   int s = 0; p = 0;
+   for (int i = 0; i < 8; i++) {
+     /* code */
+     std::cout << '\n';
+     for(int j = 0; j < 4; j++){
+       s++;
+       if (strcpy(bus[l].seat[i][j], "Empty") == 0) {
+         /* code */
+         std::cout.width(5);
+         std::cout.fill(' ');
+         std::cout << s << '.';
+         std::cout.width(10);
+         std::cout.fill(' ');
+         std::cout << bus[l].seat[i][j];
+         p++;
+       }else{
+         std::cout.width(5);
+         std::cout.fill(' ');
+         std::cout << s << '.';
+         std::cout.width(10);
+         std::cout.fill(' ');
+         std::cout << bus[l].seat[i][j];
+       }
+     }
+   }
+   std::cout << "\n\nThere are " << p << " seats empty in Bus No: " << bus[l].busn;
+ }
+void a::avail()
