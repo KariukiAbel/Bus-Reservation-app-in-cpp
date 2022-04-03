@@ -170,3 +170,34 @@ void a::avail(){
     vline('_')
   }
 }
+
+int main(){
+  system("cls");
+  int w;
+  while(true){
+    cout<<"\n\n\n\n\n";
+    cout<<"\t\t\t1.Install\n\t\t\t"
+    << "2.Reservation\n\t\t\t"
+    << "3.Show\n\t\t\t"
+    << "4.Buses Available. \n\t\t\t"
+    << "5.Exit";
+    cout<< "\n\t\t\tEnter your choice:-> ";
+    std::cin >> w;
+    switch (w) {
+      case 1: bus[p].install();
+      break;
+
+      case 2: bus[p].allotment();
+      break;
+
+      case 3: bus[0].show();
+      break;
+
+      case 4: bus[0].avail();
+      break;
+
+      case 5: exit(0);
+    }
+  }
+  return 0;
+}
