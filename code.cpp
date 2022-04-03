@@ -156,4 +156,6 @@ void a::allotment(){
    }
    std::cout << "\n\nThere are " << p << " seats empty in Bus No: " << bus[l].busn;
  }
-void a::avail()
+void a::avail(){
+  
+}
