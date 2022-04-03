@@ -80,4 +80,38 @@ void a::allotment(){
         goto top;
       }
 }
- void a:: empty()
+ void a:: empty(){
+   for (int i = 0; i < 8; i++) {
+     /* code */
+     for (int j = 0; j < 4; j++) {
+       /* code */
+       strcpy(bus[p].seat[i][j], "Empty");
+     }
+   }
+ }
+
+ void a::show(){
+   int n;
+   char number[5];
+   std::cout << "Enter bus no: ";
+   std::cin >> number;
+   for (n = 0; n <= p; n++) {
+     /* code */
+     if (strcpy(bus[n].busn, number) == 0) {
+       /* code */
+       break;
+     }
+     while(n<= p){
+       vline('*');
+       std::cout << "Bus no: \t" << bus[n].busn
+       << "\nDriver: \t" << bus[n].driver
+       <<"\t\tArrival time: \t" <<bus[n].arrival
+       <<"\nDeparture time: "<<bus[n].depart
+       <<"\nFrom: \t\t"<<bus[n].from
+       <<"\t\tTo: \t\t"<<bus[n].to<<"\n";
+       vline('*');
+       bus[0].position(n);
+       int a =1;
+     }
+   }
+ }
